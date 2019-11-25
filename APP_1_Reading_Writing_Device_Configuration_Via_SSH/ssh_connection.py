@@ -4,12 +4,13 @@ import time
 import sys
 import re
 
+
 # Checking username/password file
 # Prompting user for input - USERNAME/PASSWORD FILE
-user_file = input("\n# Enter user file path and name (e.g. D:\MyApps\myfile.txt): ")
+user_file = "user.txt"
 
 # Verifying the validity of the USERNAME/PASSWORD file
-if os.path.isfile(user_file) == True:
+if os.path.isfile(user_file):
     print("\n* Username/password file is valid :)\n")
 
 else:
@@ -18,10 +19,10 @@ else:
 
 # Checking commands file
 # Prompting user for input - COMMANDS FILE
-cmd_file = input("\n# Enter commands file path and name (e.g. D:\MyApps\myfile.txt): ")
+cmd_file = "cmd.txt"
 
 # Verifying the validity of the COMMANDS FILE
-if os.path.isfile(cmd_file) == True:
+if os.path.isfile(cmd_file):
     print("\n* Command file is valid :)\n")
 
 else:
