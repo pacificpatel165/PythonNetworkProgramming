@@ -1,1 +1,11 @@
 show interfaces loopback 0
+tacacs-server host 10.10.10.7
+tacacs-server key python
+tacacs-server timeout 10
+ntp server 10.10.10.8
+vlan 22
+vlan 33
+vlan 44
+show tacacs
+show ntp status
+show vlan
