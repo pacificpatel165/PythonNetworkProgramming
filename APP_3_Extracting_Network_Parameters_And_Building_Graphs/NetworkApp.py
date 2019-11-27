@@ -1,5 +1,6 @@
 # Importing the necessary modules
 import sys
+import time
 
 from ip_file_valid import ip_file_valid
 from ip_addr_valid import ip_addr_valid
@@ -27,6 +28,13 @@ except KeyboardInterrupt:
     sys.exit()
 
 # Calling threads creation function for one or multiple SSH connections
-create_threads(ip_list, ssh_connection)
+try:
+    while True:
+        create_threads(ip_list, ssh_connection)
+        time.sleep(10)
+
+except KeyboardInterrupt:
+    print("\n\n* Program aborted by user. Exiting...\n")
+    sys.exit()
 
 # End of program
